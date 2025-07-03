@@ -9,5 +9,5 @@ RUN apt-get update && apt-get install -y \
 RUN curl -sS https://getcomposer.org/installer | php && \
     mv composer.phar /usr/local/bin/composer
 
-# Installer Xdebug pour la couverture de code
+# Installer Xdebug pour coverage
 RUN pecl install xdebug && docker-php-ext-enable xdebug

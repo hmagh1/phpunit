@@ -2,7 +2,7 @@ FROM php:8.2-cli
 
 # Installer les dépendances système
 RUN apt-get update && apt-get install -y \
-    unzip zip git curl libzip-dev && \
+    unzip zip git curl libzip-dev zlib1g-dev && \
     docker-php-ext-install zip
 
 # Installer Composer
